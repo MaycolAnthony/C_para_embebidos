@@ -27,6 +27,19 @@ n: cantidad de bytes a modificar en cadena1
 --------------------------------------------------------------------------------------
 strtk(str,delim):
 parte la cadena str en una secuencia de tokens usando el delimitador delim
+--------------------------------------------------------------------------------------
+strrev(cadena1):
+invierte el string cadena1
+-------------------------------------------------------------------
+strcspn(cadena1,cad):
+devuelve la posición del primer carácter que coincide con alguno de 
+los caracteres de otra cadena dada
+--------------------------------------------------------------------
+strncpy(nuevacad,cadena1,4):
+copia los n primeros caracteres de una cadena en otra
+------------------------------------------------------------------------
+strncat(cadena1,cadena2,16):
+añade los n primeros caracteres de una cadena al final de otra
 */
 
 #include<stdint.h>
@@ -38,7 +51,12 @@ char claveUsuario[]="ANSI C";
 char claveIngresada[]="ANSI Z";
 char curso[50];
 char nombresApellidos[60]="Maycol Anthony ";
+char cadena1[]="Hola mundo";
+char cad[]="la";
+char nuevacad[]="";
+char cadena2[]=", saluda Maycol. Aprendan ANSI C";
 
+uint8_t posicion;
 uint8_t longitudCad;
 int main(void){
 	//strlen(cadena):
@@ -77,7 +95,20 @@ int main(void){
 	memset(texto1,'A',5);
 	printf("El nuevo contenido de texto1 es: %s \n",texto1);
 
-	//
+	//strrev:
+	printf("Cadena1 es : %s \n",cadena1);
+	printf("La NUEVA cadena1 es : %s\n",strrev(cadena1));
+	strrev(cadena1);
+	//strcspn
+	posicion=strcspn(cadena1,cad);
+	printf("la se encuentra en la posicion %d de la cadena\n",posicion);
+	//strncpy
+	strncpy(nuevacad,cadena1,4);
+	printf("Los primeros 4 caracteres de cadena1 son: %s \n",nuevacad);
+	//strncat
+	printf("Cadena1 es : %s \n",cadena1);
+	strncat(cadena1,cadena2,16);
+	printf("La nueva cadena 1 es: %s \n",cadena1);
 	
 	return 0;
 }

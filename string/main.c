@@ -40,6 +40,9 @@ copia los n primeros caracteres de una cadena en otra
 ------------------------------------------------------------------------
 strncat(cadena1,cadena2,16):
 añade los n primeros caracteres de una cadena al final de otra
+------------------------------------------------------------------------
+strpbrk(string1, string2):
+encuentra la primera ocurrencia de alguno de los caracteres de una cadena dada en otra
 */
 
 #include<stdint.h>
@@ -55,6 +58,9 @@ char cadena1[]="Hola mundo";
 char cad[]="la";
 char nuevacad[]="";
 char cadena2[]=", saluda Maycol. Aprendan ANSI C";
+char string1[]="abcde2fghi3jk4l";
+char string2[] = "34";
+char *ret;
 
 uint8_t posicion;
 uint8_t longitudCad;
@@ -109,6 +115,14 @@ int main(void){
 	printf("Cadena1 es : %s \n",cadena1);
 	strncat(cadena1,cadena2,16);
 	printf("La nueva cadena 1 es: %s \n",cadena1);
+	//strpbrk
+	ret = strpbrk(string1, string2);
+    if(ret){
+       printf("Primer caracter coincidente: %c\n", *ret);
+    } 
+	else{
+       printf("Caracter no encontrado");
+    }
 	
 	return 0;
 }

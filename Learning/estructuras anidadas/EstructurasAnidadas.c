@@ -44,7 +44,7 @@ int main(void){
 	
 	printf("Datos del empleado 1: \n");
 	printf("Nombre :%s \n",empleado1.nombre);
-	printf("Direccion: %s -%s - %s \n",empleado1.infoDir.direccion,
+	printf("Direccion: %s - %s - %s \n",empleado1.infoDir.direccion,
 										empleado1.infoDir.ciudad,
 										empleado1.infoDir.provincia);
 	printf("Salario :%.2f \n",empleado1.salario);

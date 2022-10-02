@@ -30,7 +30,7 @@ int main(void){
 	camisa2.talla=16.5;
 	camisa2.precio=98.78;
 	printf("\n \n\n");
-	//obtener datos del objeto camisa1
+	//obtener datos del objeto camisa2
 	printf("Datos de camisa 2:\n");
 	printf("Marca: %s\n",camisa2.marca);
 	printf("Modelo: %s\n",camisa2.modelo);

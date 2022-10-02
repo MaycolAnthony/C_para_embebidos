@@ -18,7 +18,7 @@ typedef struct{
 
 Producto_t p1={184550,"MUC PIC18F4550 - Microchip",4.5};
 Producto_t p2={328,"MUC ATmega328PB - Microchip",2.45};
-Producto_t p3={184550,"MUC TM4C123H6 - Texas Instruments",6.9};
+Producto_t p3={184550,"MUC TM4C123GH6 - Texas Instruments",6.9};
 
 void getProducto(uint8_t nroProd,Producto_t px);
 

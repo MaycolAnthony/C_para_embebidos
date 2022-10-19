@@ -19,6 +19,12 @@ int main(void){
 	printf("Valor x: %u \n",x);
 	printf("Valor x: %u \n",*p);
 	
+	p=&y;//apunta a la direccion de memoria de y
+	printf("Valor y: %u \n",y);//acceso directo a y
+	printf("Valor y: %u \n",*p);//acceso indirecto
+	*p=81;//modifica la variabe y
+	printf("Valor y: %u \n",y);//acceso directo a y
+	printf("Valor y: %u \n",*p);//acceso indirecto
 	
 	
 }

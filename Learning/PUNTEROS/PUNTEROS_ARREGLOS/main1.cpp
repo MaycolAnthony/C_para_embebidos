@@ -15,5 +15,6 @@ int main(void){
 	printf("Valod de datos[3]: %u\n",*ptr);
 	ptr-=3;//Aritmetica de punteros
 	printf("Valod de datos[0]: %u\n",*ptr);
+
 	return 0;
 }
